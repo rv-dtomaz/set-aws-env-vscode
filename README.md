@@ -1,4 +1,4 @@
-# debug-aws
+# set-aws-env-vscode
 
 `set-aws-env-vscode` Allows you to set configs and debug applications that use AWS resources and need to authenticate with aws-okta.
 
