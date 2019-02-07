@@ -26,3 +26,4 @@ $ aws-okta execute [profilename] -- debug-aws
 
 ```
 
+![Alt Text](/img/screen.gif)
