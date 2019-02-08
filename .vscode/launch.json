@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}",
+            "env": {
+					"AWS_ACCESS_KEY_ID":"ASIA46GOQX2YACZ3Y3NV",
+					"AWS_SECRET_ACCESS_KEY":"v+F+HpnBGbFgd39O64hn9eoOcRiPuzbI3pHsSSzi",
+					"AWS_OKTA_PROFILE":"iq-dev",
+					"AWS_SESSION_TOKEN":"FQoGZXIvYXdzEO7//////////wEaDEIcOYhnrROU69notCLqAVcyKnh0YuB+97WznPI+6VK5hWR2g1OLW8AUBxz9WdoOwDCSQcCOL2FApDgfJ7pEtfz6ggA9bHMX4YvCTikkhZ2tAkyb/b6wn+aZfBzb4H5ieCowjfp7Ndavx6NyIPQ44aGffNto32cFWBq8oKbT8rDAfs6WwTqcsewON9y6ynSoF8/mq7a31/wgvy9gxre0vkD0ru0iAANp/O8CI+KOdy3qVckWe3ulvkd/7rz5cGxZShsZAU6W5vtfPASkvny4lpCJ4qMbH+grah/keo6X3gPOQ4I7g01XQm54yUVvogEKrlLBEEt8IjjObSiLwvDiBQ==",
+					"AWS_SECURITY_TOKEN":"FQoGZXIvYXdzEO7//////////wEaDEIcOYhnrROU69notCLqAVcyKnh0YuB+97WznPI+6VK5hWR2g1OLW8AUBxz9WdoOwDCSQcCOL2FApDgfJ7pEtfz6ggA9bHMX4YvCTikkhZ2tAkyb/b6wn+aZfBzb4H5ieCowjfp7Ndavx6NyIPQ44aGffNto32cFWBq8oKbT8rDAfs6WwTqcsewON9y6ynSoF8/mq7a31/wgvy9gxre0vkD0ru0iAANp/O8CI+KOdy3qVckWe3ulvkd/7rz5cGxZShsZAU6W5vtfPASkvny4lpCJ4qMbH+grah/keo6X3gPOQ4I7g01XQm54yUVvogEKrlLBEEt8IjjObSiLwvDiBQ=="
+					},
+            "args": ["iq-dev"]
+        }
+    ]
+}
