@@ -40,13 +40,28 @@ func main() {
 func CreateKeys(pathFile string, keys map[string]string) {
 
 	bstr := make([]string, 0)
+	envStr := make([]string, 0)
 	for k, v := range keys {
 		bstr = append(bstr, fmt.Sprintf("\t\t\t\t\t\"%s\":\"%s\"", k, v))
+		envStr = append(envStr, fmt.Sprintf("%s=%s", k, v))
 	}
 	data, _ := ioutil.ReadFile(pathFile)
 	fullFileStr := string(data)
-	r, _ := regexp.Compile(`\"env\":\s{([^}]+)}`)
-	strInterfaceRepo := r.ReplaceAllString(fullFileStr, "\"env\": {\n"+strings.Join(bstr, ",\n")+"\n\t\t\t\t\t}")
 
+	r, _ := regexp.Compile(`\"env\":\s{([^}]+)}`)
+	strInterfaceRepo := ""
+	finalStr := "\"env\": {\n" + strings.Join(bstr, ",\n") + "\n\t\t\t\t\t}"
+
+	if r.MatchString(fullFileStr) {
+		strInterfaceRepo = r.ReplaceAllString(fullFileStr, finalStr)
+	} else {
+		r, _ = regexp.Compile(`\"env\":\s{}`)
+		strInterfaceRepo = r.ReplaceAllString(fullFileStr, finalStr)
+
+	}
+
+	baseEnvPath, _ := os.Getwd()
+	var envPath = fmt.Sprintf("%s/.env", baseEnvPath)
+	ioutil.WriteFile(envPath, []byte(strings.Join(envStr, "\n")), 0666)
 	ioutil.WriteFile(pathFile, []byte(strInterfaceRepo), 0666)
 }
